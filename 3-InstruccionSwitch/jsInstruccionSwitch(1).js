@@ -1,9 +1,13 @@
 function mostrar()
 {
-//tomo la edad  
-var mesDelAño = document.getElementById('mes').value;
+ 
+var mesDelAño;
+
+mesDelAño = document.getElementById("mes").value;
+
+switch()
 
 
 
 
-}//FIN DE LA FUNCIÓN
+}
