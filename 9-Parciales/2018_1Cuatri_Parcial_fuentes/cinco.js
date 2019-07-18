@@ -28,6 +28,12 @@ function mostrar()
             alert("Acá hace mas frío");
 
             break;
+        
+        default:
+
+            alert("No es un planeta");
+
+            break;
 
     }
  

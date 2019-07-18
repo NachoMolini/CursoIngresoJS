@@ -1,13 +1,25 @@
 function mostrar()
-{
- 
-var mesDelAño;
+{ 
+    var mesDelAnio; //se puede usar la ñ, pero no conviene a futuro
 
-mesDelAño = document.getElementById("mes").value;
+    mesDelAnio = document.getElementById("mes").value;
 
-switch()
+    switch(mesDelAnio){
 
+        case "Enero":
+            alert("Que comiences bien el año!!");
+            break;
 
+        case "Marzo":
+            alert("A clases!!");
+            break;
 
-
+        case "Julio":
+            alert("Se vienen las vacaciones!!");
+            break;
+            
+        case "Diciembre":
+            alert("Felices fiestas!!");
+            break;
+    }
 }
