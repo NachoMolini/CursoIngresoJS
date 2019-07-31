@@ -78,7 +78,14 @@ function CalcularPrecio ()
     precioConDescuento = document.getElementById("precioDescuento").value;
 
     if(precioConDescuento > 120){
+
+        iibb = parseFloat(iibb);
+        precioConDescuento  = parseFloat(precioConDescuento);
+
         iibb = precioConDescuento*10/100;
+        precioConDescuento = precioConDescuento + iibb;
+        
+        document.getElementById("precioDescuento").value = precioConDescuento;
         alert("Usted pago $"+iibb+" de IIBB");
     }
 }*/
@@ -152,8 +159,13 @@ function CalcularPrecio ()
             }
         case "2":
         case "1":
-            precioConDescuento = cantidad*precio;
-            document.getElementById("precioDescuento").value = precioConDescuento;
-            break;         
+            precioSinDescuento = cantidad*precio;
+            document.getElementById("precioDescuento").value = precioSinDescuento;
+            break;   
+        
+        default:
+            precioSinDescuento = cantidad*precio;
+            precioConDescuento = precioSinDescuento*50/100;
+            document.getElementById("precioDescuento").value = precioConDescuento; 
     }
 }

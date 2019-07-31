@@ -16,7 +16,7 @@ function Rectangulo ()
     largo=parseInt(largo);
     ancho=parseInt(ancho);
     
-    total=largo*2+ancho*2;
+    total=(largo*2+ancho*2)*3;
   
     alert(total);
 }
@@ -46,11 +46,9 @@ function Materiales ()
    
     largo=parseInt(largo);
     ancho=parseInt(ancho);
+
+    cemento = largo*ancho*2;
+    cal = cemento*3/2;
     
-    cemento=largo*2+ancho*2;
-
-    cal=cemento*3/2;
-
     alert("bolsas de cemento: "+cemento+" bolsas de cal: "+cal);
-
 }
