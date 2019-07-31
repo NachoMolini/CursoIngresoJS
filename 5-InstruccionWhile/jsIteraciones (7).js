@@ -6,7 +6,7 @@ function mostrar()
 	var respuesta='si';
 
 
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
+document.getElementById("suma").value = acumulador;
+document.getElementById("promedio").value = acumulador/contador;
 
-}//FIN DE LA FUNCIÓN
+}

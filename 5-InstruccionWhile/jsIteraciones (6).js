@@ -3,8 +3,7 @@ function mostrar()
 	var contador=0;
 	var acumulador=0;
 	var numero;
-	var promedio;
-
+	
 	while(contador<5){
 
 		contador = contador+1;
@@ -16,14 +15,9 @@ function mostrar()
 			numero = parseInt(numero);
 		}
 		acumulador = acumulador+numero;
-
 	}
-	promedio = acumulador/contador;
-	alert(acumulador);
-	alert(promedio);
 	
-
-
-
+	document.getElementById("suma").value = "La suma es " + acumulador;
+	document.getElementById("promedio").value = "El promedio es " + acumulador/contador;
 
 }
