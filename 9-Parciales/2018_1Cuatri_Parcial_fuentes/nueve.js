@@ -4,9 +4,13 @@ function mostrar()
     var peso;
     var temperatura;
     var respuesta;
-    var resto;
-    var contadorPar;
-    var contadorBajoCero;
+    var maximo;
+    var minimo;
+    var maxPeso;
+    var contador=0;
+    var acumulador=0;
+    var contadorPar=0;
+    var contadorBajoCero=0;
 
     do
     {
@@ -28,14 +32,32 @@ function mostrar()
             temperatura = parseInt(temperatura);
         }
 
-        resto = temperatura%2;
-        while(resto==0){
-            
+        if(contador==0)
+        {
+            maximo = peso;
+            minimo = peso;
+            maxPeso = marca;
+        }
+        else if(peso>maximo)
+        {
+            maximo = peso;
+            maxPeso = marca;
+        }
+        else if(peso<minimo)
+        {
+            minimo = peso;
+        }
+
+        acumulador = acumulador+peso;
+        contador++;
+
+        if(temperatura%2==0)
+        {
             contadorPar++;
         }
         
-        while(temperatura<0){
-
+        if(temperatura<0)
+        {
             contadorBajoCero++;
         }
 
@@ -43,9 +65,10 @@ function mostrar()
 
     }while(respuesta)
 
-    
-
-    
-
-
+    document.write("La cantidad de temperaturas pares es: " + contadorPar + "<br>");
+    document.write("La marca del producto más pesado: " + maxPeso + "<br>");
+    document.write("La cantidad de productos que se conservan a menos de 0 grados es: " + contadorBajoCero + "<br>");
+    document.write("El promedio del peso de todos los productos es: " + acumulador/contador + "<br>");
+    document.write("El peso máximo es: " + maximo + " y el mínimo es: " + minimo + "<br>");
+        
 }
